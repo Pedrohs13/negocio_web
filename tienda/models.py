@@ -3,7 +3,7 @@ from django.urls import reverse
 # Create your models here.
 
 
-class Categoria(model.Model):
+class Categoria(models.Model):
     nombre=models.CharField(max_length=200,db_index=True)
     slug=models.SlugField(max_length=200,unique=True)
 
@@ -19,7 +19,7 @@ class Categoria(model.Model):
     def get_absolute_url(self):
         return reverse("tienda:lista_productos", args=[self.slug])
 '''
-class Productos (model.Model):
+class Productos (models.Model):
     categoria=models.ForeignKey(Categoria,related_name='productos',on_delete=models.CASCADE  )
     
         
