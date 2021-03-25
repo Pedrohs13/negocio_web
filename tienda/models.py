@@ -18,10 +18,10 @@ class Categoria(model.Model):
 
     def get_absolute_url(self):
         return reverse("tienda:lista_productos", args=[self.slug])
-
+'''
 class Productos (model.Model):
     categoria=models.ForeignKey(Categoria,related_name='productos',on_delete=models.CASCADE  )
     
         
-    
+   ''' 
     
